@@ -9,9 +9,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = secrets.token_hex(32)
 user_list = []
 
-# Home page
-# Der Browser gibt den User einen keks
-# gibt den user einen keks :)
+
 @app.get("/")
 def home():
     # If there is no cookies need to get them
@@ -58,8 +56,7 @@ def create():
     new_file_room.close()
     return redirect(f"/room/{number}")
 
-#es gibt momentan noch keinen weg einen room code zu erhalten
-#das muss ein anderer vollidiot machen nicht ich
+
 
 
 @app.route("/join/", methods=['GET', 'POST'])
